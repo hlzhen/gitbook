@@ -1,67 +1,65 @@
-
 {
-    "title": "GitBook",
-    "author": "Ale",
-    "description": "live and learn",
-    "language": "zh-hans",
-    "gitbook": "3.2.3",
-    "styles": {
-        "website": "styles/website.css",
-        "ebook": "styles/ebook.css",
-        "pdf": "styles/pdf.css",
-        "mobi": "styles/mobi.css",
-        "epub": "styles/epub.css"
+  "title": "GitBook",
+  "author": "Ale",
+  "description": "live and learn",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  },
+  "plugins": [
+    "search",
+    "search-pro",
+    "-highlight",
+    "-sharing",
+    "code-optimize",
+    "sidebar-style",
+    "github",
+    "flexible-alerts",
+    "expandable-chapters-small",
+    "tbfed-pagefooter",
+    "anchor-navigation-ex",
+    "pageview-count"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/hlzhen"
     },
-    "plugins": [
-      "search",
-      "search-pro",
-      "-highlight",
-      "-sharing",
-      "code-optimize",
-      "sidebar-style",
-      "github",
-      "flexible-alerts",
-      "expandable-chapters-small",
-      "tbfed-pagefooter",
-      "anchor-navigation-ex",
-      "pageview-count"
-    ],
-
-    "pluginsConfig": {
-      "github": {
-        "url": "https://github.com/hlzhen"
-      },
-      "code-optimize": {
-        "copyButtons": true,
-        "showLines": true
-      },
-      "flexible-alerts": {
-        "style": "callout",
-        "comment": {
-          "label": "Comment",
-          "icon": "fa fa-comments",
-          "className": "info"
-        }
-      },
-      "sidebar-style": {
-          "title": "个人博客",
-          "author": "Ale"
-      },
-      "anchor-navigation-ex": {
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right",
-            "multipleH1": false,
-            "multipleH2": false,
-            "multipleH3": false,
-            "multipleH4": false,
-            "showLevelIcon": false,
-            "showLevel": false
-        },
-      "tbfed-pagefooter": {
-         "copyright":"&copy Ale",
-         "modify_label": "该文修订时间：",
-         "modify_format": "YYYY-MM-DD HH:mm:ss"
-       }
+    "code-optimize": {
+      "copyButtons": true,
+      "showLines": true
+    },
+    "flexible-alerts": {
+      "style": "callout",
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
+    },
+    "sidebar-style": {
+      "title": "个人博客",
+      "author": "Ale"
+    },
+    "anchor-navigation-ex": {
+      "tocLevel1Icon": "fa fa-hand-o-right",
+      "tocLevel2Icon": "fa fa-hand-o-right",
+      "tocLevel3Icon": "fa fa-hand-o-right",
+      "multipleH1": false,
+      "multipleH2": false,
+      "multipleH3": false,
+      "multipleH4": false,
+      "showLevelIcon": false,
+      "showLevel": false
+    },
+    "tbfed-pagefooter": {
+      "copyright": "&copy Ale",
+      "modify_label": "该文修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
     }
+  }
 }
