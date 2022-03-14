@@ -11,6 +11,3 @@
 
 * [Spring](Spring/README.md)
   * [引言](Spring/spring-引言.md)
-  * [IOC入门案例](Spring/Spring-入门案例.md)
-  * [IOC概述和原理](Spring/IOC概述和原理.md)
-* [Spring-Security](spring-security/README.md)
