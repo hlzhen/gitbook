@@ -14,7 +14,7 @@
   "plugins": [
     "search",
     "search-pro",
-    "-highlight",
+    "highlight",
     "-sharing",
     "code-optimize",
     "sidebar-style",
@@ -31,7 +31,7 @@
     },
     "code-optimize": {
       "copyButtons": true,
-      "showLines": true
+      "showLines": false
     },
     "flexible-alerts": {
       "style": "callout",
