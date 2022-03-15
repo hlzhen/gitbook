@@ -9,5 +9,5 @@
 * [Git](git-command/README.md)
   * [常用命令](git-command/git常用命令.md)
 
-* [Spring](Spring/README.md)
-  * [引言](Spring/spring-引言.md)
+* [Spring](spring/README.md)
+  * [引言](spring/spring-引言.md)
