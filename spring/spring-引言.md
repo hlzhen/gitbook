@@ -18,7 +18,7 @@
 2. 代码移植性高，不需要实现额外的接口，通过上图可看出↑
 ```
 ### 2.2. 为什么可以称之为JavaEE解决方案？
-![Spring的解决方案](/assets/spring/spring的解决方案.png)
+![Spring的解决方案](/assets/spring/spring_solution.png)
 ### 2.3. 为什么能够做到轻量级，能够成为一个完整的解决方案？
 ```markdown
  通过Spring源码可看出，Spring是对原有设计模式的高度封装整合，内部包含工厂、代理、策略、模版等设计模式的合理封装。
@@ -49,7 +49,7 @@ GOF4人帮所定义的23种设计模式，例如：工厂、单例、适配器�
 修改源代码进行调整(不符合开闭原则)。那工厂则可直接通过配置进行调整，不需要进行源代码的修改，
 只需要新增业务类然后进行配置即可(符合开闭原则)。耦合关系如下图
 ```
-![耦合代码](/assets/spring/耦合代码.png)
+![耦合代码](/assets/spring/coupling_code.png)
 ### 4.2 简单工厂的设计
 ```java
 package com.design.gof.created.factory.method.demo3;
