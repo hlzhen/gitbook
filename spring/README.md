@@ -36,5 +36,5 @@
 <br/>
 
 > [!TIP|style:callout|label:Spring核心架构图 |iconVisibility:hidden]
-> ![](https://ploerp.oss-cn-guangzhou.aliyuncs.com/assets/spring5/WeChat7e4b629d6074f2eb6a92e65dc1bac473.png?Expires=1647059015&OSSAccessKeyId=TMP.3Kg1RNAtAnrY6weYjdsDx2NdjTfsLjaczbDeR5J8nfKPXhD8egvyeYnjQNM5hb4neankDRunUdqSipYwt5NeJXj6Z4d1mW&Signature=ZXJkNF7viDNq9F9rrzKxB8SXFGI%3D&versionId=CAEQExiBgIDbgM7w.xciIDdhNzdkNmI1YmEwZTRlOWM4Y2QwYTY3YzIzNThiN2Mw)
+> ![核心架构图](/assets/spring/spring_core.png)
 
