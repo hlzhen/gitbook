@@ -245,3 +245,17 @@ public class Client {
     }
 }
 ```
+### 4.3 通用工厂的设计
+```markdown
+简单工厂的问题会导致大量代码的冗余，也不符合开闭原则的设计，例如上述代码中的工厂类，需要进一步进行调整，调整如下
+public static Object getBean(String key) {
+    Object ret = null;
+     try {
+        Class clazz = Class.forName(env.getProperty(key));
+        ret = clazz.newInstance();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return ret;
+}
+```
