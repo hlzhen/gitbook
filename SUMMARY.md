@@ -1,6 +1,11 @@
 # Summary
 
 * [前言](README.md)
+* [环境配置](context-configuration/README.md)
+  * [JDK配置](/context-configuration/README.md)
+    * [Windows](/context-configuration/java-configuration/windows-jdk-x64.md)
+    * [MacOS](/context-configuration/java-configuration/macos-jdk.md)
+    * [Linux](/context-configuration/java-configuration/linux-jdk.md)
 * [设计模式](design-mode/README.md)
   * [七大原则](design-mode/设计模式-七大原则.md)
   * [创建型模式](design-mode/created/README.md)
@@ -13,5 +18,8 @@
   * [第一章 引言](spring/spring-引言.md)
   * [第二章 入门案例](spring/spring-入门案例.md)
   * [第三章 注入](spring/spring-注入.md)
-  * [第四章 Set注入详解](spring/spring-set注入.md)
-  * [第五章 构造注入](spring/spring-构造注入.md)
+    * [1 Set注入详解](spring/spring-set注入.md)
+    * [2 构造注入](spring/spring-构造注入.md)
+  * [第四章 控制反转 与 依赖注入](spring/spring-控制反转与依赖注入.md)
+  * [第五章 Bean的实例控制](spring/spring-scope.md)
+  * [第六章 Bean的生命周期](spring/spring-bean-lifecycle.md)
