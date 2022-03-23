@@ -23,3 +23,7 @@
   * [第四章 控制反转 与 依赖注入](spring/spring-控制反转与依赖注入.md)
   * [第五章 Bean的实例控制](spring/spring-scope.md)
   * [第六章 Bean的生命周期](spring/spring-bean-lifecycle.md)
+  * [第七章 Bean的后置处理](spring/spring-beanPostProcessor.md)
+  * [第十章 其它](spring/other/README.md)
+    * [配置文件参数化](spring/other/spring-配置文件参数化.md)
+    * [自定义类型转换](spring/other/spring-自定义类型转换器.md)
