@@ -26,6 +26,7 @@
   * [第七章 Bean的后置处理](spring/spring-beanPostProcessor.md)
   * [第八章 Aop编程](spring/aop/README.md)
     * [静态代理](spring/aop/aop-静态代理设计模式.md)
+    * [动态代理](spring/aop/aop-动态代理设计模式.md)
   * [第十章 其它](spring/other/README.md)
     * [配置文件参数化](spring/other/spring-配置文件参数化.md)
     * [自定义类型转换](spring/other/spring-自定义类型转换器.md)
