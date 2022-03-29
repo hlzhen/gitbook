@@ -33,3 +33,4 @@
   * [第十章 其它](spring/other/README.md)
     * [配置文件参数化](spring/other/spring-配置文件参数化.md)
     * [自定义类型转换](spring/other/spring-自定义类型转换器.md)
+    * [整合Mybatis](spring/spring-mybatis.md)
