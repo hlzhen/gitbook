@@ -1,4 +1,4 @@
-# SpringWeb开发 - SSM整合(基于配置文件)
+# Spring整合Struts2
 
 ## 1. 环境搭建
 ```xml
@@ -25,11 +25,6 @@
         <java.version>1.8</java.version>
         <struts2-version>2.3.8</struts2-version>
         <spring-version>5.2.6.RELEASE</spring-version>
-        <mysql-connector-version>5.1.47</mysql-connector-version>
-        <spring-jdbc-version>5.2.13.RELEASE</spring-jdbc-version>
-        <spring-mybatis-version>2.0.6</spring-mybatis-version>
-        <mybatis-version>3.5.6</mybatis-version>
-        <druid-version>1.2.6</druid-version>
         <aspectjrt-version>1.9.5</aspectjrt-version>
         <aspectjweaver-version>1.9.5</aspectjweaver-version>
     </properties>
@@ -60,7 +55,6 @@
             <artifactId>struts2-spring-plugin</artifactId>
             <version>${struts2-version}</version>
         </dependency>
-
 
         <!-- spring对web开发的支持依赖 -->
         <dependency>
@@ -114,50 +108,6 @@
             <version>${aspectjweaver-version}</version>
         </dependency>
 
-        <!-- mysql驱动包 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-version}</version>
-        </dependency>
-
-        <!--spring针对jdbc封装-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring-jdbc-version}</version>
-        </dependency>
-
-        <!-- mybatis与spring整合相关 -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>${spring-mybatis-version}</version>
-        </dependency>
-
-        <!-- mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>${mybatis-version}</version>
-        </dependency>
-
-        <!-- druid 连接池 -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>${druid-version}</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-
-
         <!-- log4j日志 -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -170,11 +120,10 @@
             <version>1.2.17</version>
         </dependency>
     </dependencies>
-
 </project>
 ```
 
-## 2. Spring整合MVC框架的核心思路
+## 2. Spring整合MVC(Struts2)框架的核心思路
 ### 2.1 准备工厂
 ```markdown
 1. 工厂的创建方式
@@ -318,5 +267,3 @@ public class RegAction implements Action {
 ```markdown
 把应用部署到tomcat中浏览器访问localhost:端口号/reg.action即可
 ```
-
-## 3. Spring+Struts2+Mybatis整合(SSM)
