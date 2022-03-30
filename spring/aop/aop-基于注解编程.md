@@ -122,3 +122,37 @@ public class MyAspect {
     那么就需要谨慎使用this调用服务内部方法，因为this指向的是原始类，而不是代理类。
     如果使用的是this调用则代理类相关的额外功能添加不了(根据业务需求进行处理到底是this还是通过Spring工厂获取代理对象调用)
 ```
+### 4.1 ApplicationContextAware接口的栗子
+```java
+/**
+ * Created by Ale on 2022/3/27
+ */
+public class UserServiceImpl implements UserService, ApplicationContextAware {
+    private ApplicationContext context;
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.context = applicationContext;
+    }
+
+    @Override
+    public void login(String username, String password) {
+        System.out.println("UserServiceImpl.login");
+    }
+
+    @Override
+    public void register(User user) {
+        /**
+         * 案例：此时我通过AOP为当前类的login方法添加了日志的功能
+         * 如果在本类中使用this调用login那么日志功能是无效的，因为this指向的是当前原始类而不是代理类
+         * 解决方法就是实现ApplicationContextAware接口，然后实现setApplicationContext继而得到工厂对象
+         * 通过工厂对象去获取当前类的代理对象，在通过代理对象调用login方法日志才有效
+         */
+        UserService userService = (UserService) this.context.getBean("userService");
+        userService.login("xhh", "123456");
+
+        // this指向的是当前类，如果login方法通过aop添加了额外功能的话(比如日志)那么此时是无效的
+        this.login("admin", "123456");
+    }
+}
+```
