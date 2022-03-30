@@ -336,3 +336,34 @@ public class RegAction implements Action {
     </package>
 </struts>
 ```
+
+## 5. 配置优化
+### 5.1 分层
+```
+通过Spring的多配置处理，可把Action、Service、DAO间的配置进行拆分然后在合并到总配置中，利于管理与维护
+Action  -----> applicationContext-action.xml
+Service -----> applicationContext-service.xml
+DAO     -----> applicationContext-dao.xml
+```
+### 5.2 配置方式
+```markdown
+1. 通配符方式
+    1. 非web环境
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext-*.xml");
+    2. web环境
+        <context-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:applicationContext-*.xml</param-value> 
+        <context-param>
+
+2. <import>标签方法
+    1. 需要提供一个主配置文件(applicationContext.xml)，该文件主要目的用于整合其它配置文件
+    <import resource="applicationContext-action.xml"/>
+    <import resource="applicationContext-service.xml"/>
+    <import resource="applicationContext-dao.xml"/>
+```
+
+## 6. Spring-Struts2-Mybatis整合项目地址
+```markdown
+github地址：https://github.com/hlzhen/code-learn
+```

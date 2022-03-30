@@ -35,4 +35,4 @@
     * [自定义类型转换](spring/other/spring-自定义类型转换器.md)
     * [Spring整合Mybatis](spring/other/web/spring-mybatis.md)
     * [Spring整合Struts2](spring/other/web/spring-struts2.md)
-    * [Spring-Struts2-Mybatis(SSM)](spring/other/web/spring-struts2-mybatis.md)
+    * [Spring-Struts2-Mybatis(SSM配置化整合)](spring/other/web/spring-struts2-mybatis.md)
