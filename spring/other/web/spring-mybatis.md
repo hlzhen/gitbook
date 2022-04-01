@@ -525,3 +525,48 @@ noRollbackFor={java.lang.RuntimeException,xxx,xx)
 
 </beans>
 ```
+
+## 13. Spring纯注解整合Mybtais
+```java
+/**
+ * Spring纯注解整合Mybatis
+ * @ComponentScan("org.example.annotation.mybatis") 指定扫描特定包下的相关注解(@Component、@Value等)
+ * @MapperScan 指定DAO所在包进行扫描
+ * Created by Ale on 2022/4/1
+ */
+@Configuration
+@ComponentScan("org.example.annotation.mybatis")
+@MapperScan(basePackages = "org.example.annotation.mybatis")
+public class MybatisConfiguration {
+
+
+    @Bean
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/huanglz?useSSL=false");
+        dataSource.setUsername("root");
+        dataSource.setPassword("root");
+        return dataSource;
+    }
+
+
+    @Bean
+    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        sqlSessionFactoryBean.setDataSource(dataSource);
+        sqlSessionFactoryBean.setTypeAliasesPackage("org.example.annotation.entity");
+        //sqlSessionFactoryBean.setMapperLocations(new ClassPathResource("UserDAOMapper.xml"));
+
+        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        Resource[] resources = new Resource[0];
+        try {
+            resources = resolver.getResources("mapper/*Mapper.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        sqlSessionFactoryBean.setMapperLocations(resources);
+        return sqlSessionFactoryBean;
+    }
+}
+```
