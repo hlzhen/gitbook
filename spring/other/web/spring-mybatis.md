@@ -537,11 +537,24 @@ noRollbackFor={java.lang.RuntimeException,xxx,xx)
 @Configuration
 @ComponentScan("org.example.annotation.mybatis")
 @MapperScan(basePackages = "org.example.annotation.mybatis")
+@EnableTransactionManagement
 public class MybatisConfiguration {
 
-
+    /**
+     * 数据源配置
+     * @return
+     */
     @Bean
     public DataSource dataSource() {
+        /*
+            配置文件版本
+            <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+                <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/huanglz?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </bean>
+        */
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/huanglz?useSSL=false");
@@ -551,8 +564,31 @@ public class MybatisConfiguration {
     }
 
 
+    /***
+     * SqlSessionFactoryBean
+     * @param dataSource
+     * @return
+     */
     @Bean
     public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
+        /*
+            <!-- 配置SqlSessionFactoryBean -->
+            <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+                <!-- 数据源连接池指定 -->
+                <property name="dataSource" ref="dataSource"/>
+
+                <!-- 实体别名配置 -->
+                <property name="typeAliasesPackage" value="org.example.web.pojo"/>
+
+                <!-- mapper.xml映射路径 -->
+                <property name="mapperLocations">
+                    <list>
+                        <value>classpath:mapper/*Mapper.xml</value>
+                    </list>
+                </property>
+            </bean>
+         */
+
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
         sqlSessionFactoryBean.setTypeAliasesPackage("org.example.annotation.entity");
@@ -567,6 +603,24 @@ public class MybatisConfiguration {
         }
         sqlSessionFactoryBean.setMapperLocations(resources);
         return sqlSessionFactoryBean;
+    }
+
+    /**
+     * 事物相关
+     * @param dataSource
+     * @return
+     */
+    @Bean
+    public DataSourceTransactionManager dataSourceTransactionManager(DataSource dataSource){
+        /*
+            配置文件版本
+            <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref="dataSource"/>
+            </bean>
+         */
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 }
 ```
