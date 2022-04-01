@@ -30,6 +30,7 @@
     * [AOP编程](spring/aop/aop-编程.md)
     * [基于注解的AOP编程](spring/aop/aop-基于注解编程.md)
     * [AOP总结](spring/aop/aop-总结.md)
+  * [第九章 Spring注解](spring/spring-注解详解.md)
   * [第十章 其它](spring/other/README.md)
     * [配置文件参数化](spring/other/spring-配置文件参数化.md)
     * [自定义类型转换](spring/other/spring-自定义类型转换器.md)
