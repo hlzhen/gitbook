@@ -1,0 +1,1048 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第三章 XMLBeanFactory分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ale">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code-optimize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../springmvc/" />
+    
+    
+    <link rel="prev" href="spring工厂.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../context-configuration/">
+            
+                <a href="../context-configuration/">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../context-configuration/">
+            
+                <a href="../context-configuration/">
+            
+                    
+                    JDK配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../context-configuration/java-configuration/windows-jdk-x64.html">
+            
+                <a href="../context-configuration/java-configuration/windows-jdk-x64.html">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../context-configuration/java-configuration/macos-jdk.html">
+            
+                <a href="../context-configuration/java-configuration/macos-jdk.html">
+            
+                    
+                    MacOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../context-configuration/java-configuration/linux-jdk.html">
+            
+                <a href="../context-configuration/java-configuration/linux-jdk.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../design-mode/">
+            
+                <a href="../design-mode/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../design-mode/设计模式-七大原则.html">
+            
+                <a href="../design-mode/设计模式-七大原则.html">
+            
+                    
+                    七大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../design-mode/created/">
+            
+                <a href="../design-mode/created/">
+            
+                    
+                    创建型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../design-mode/设计模式-七大原则.html">
+            
+                <a href="../design-mode/设计模式-七大原则.html">
+            
+                    
+                    工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../git-command/">
+            
+                <a href="../git-command/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../git-command/git常用命令.html">
+            
+                <a href="../git-command/git常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spring/">
+            
+                <a href="../spring/">
+            
+                    
+                    Spring5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spring/spring-引言.html">
+            
+                <a href="../spring/spring-引言.html">
+            
+                    
+                    第一章 引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spring/spring-注入.html">
+            
+                <a href="../spring/spring-注入.html">
+            
+                    
+                    第二章 注入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../spring/spring-set注入.html">
+            
+                <a href="../spring/spring-set注入.html">
+            
+                    
+                    1 Set注入详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../spring/spring-构造注入.html">
+            
+                <a href="../spring/spring-构造注入.html">
+            
+                    
+                    2 构造注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spring/spring-控制反转与依赖注入.html">
+            
+                <a href="../spring/spring-控制反转与依赖注入.html">
+            
+                    
+                    第三章 控制反转 与 依赖注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../spring/spring-scope.html">
+            
+                <a href="../spring/spring-scope.html">
+            
+                    
+                    第四章 Bean的实例控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../spring/spring-bean-lifecycle.html">
+            
+                <a href="../spring/spring-bean-lifecycle.html">
+            
+                    
+                    第五章 Bean的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../spring/spring-beanPostProcessor.html">
+            
+                <a href="../spring/spring-beanPostProcessor.html">
+            
+                    
+                    第六章 Bean的后置处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../spring/aop/">
+            
+                <a href="../spring/aop/">
+            
+                    
+                    第七章 Aop编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.7.1" data-path="../spring/aop/aop-静态代理设计模式.html">
+            
+                <a href="../spring/aop/aop-静态代理设计模式.html">
+            
+                    
+                    静态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.2" data-path="../spring/aop/aop-动态代理设计模式.html">
+            
+                <a href="../spring/aop/aop-动态代理设计模式.html">
+            
+                    
+                    动态代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.3" data-path="../spring/aop/aop-编程.html">
+            
+                <a href="../spring/aop/aop-编程.html">
+            
+                    
+                    AOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.4" data-path="../spring/aop/aop-基于注解编程.html">
+            
+                <a href="../spring/aop/aop-基于注解编程.html">
+            
+                    
+                    基于注解的AOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.5" data-path="../spring/aop/aop-总结.html">
+            
+                <a href="../spring/aop/aop-总结.html">
+            
+                    
+                    AOP总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../spring/spring-注解详解.html">
+            
+                <a href="../spring/spring-注解详解.html">
+            
+                    
+                    第八章 Spring注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../spring/other/">
+            
+                <a href="../spring/other/">
+            
+                    
+                    第九章 其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="../spring/other/spring-配置文件参数化.html">
+            
+                <a href="../spring/other/spring-配置文件参数化.html">
+            
+                    
+                    配置文件参数化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="../spring/other/spring-自定义类型转换器.html">
+            
+                <a href="../spring/other/spring-自定义类型转换器.html">
+            
+                    
+                    自定义类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.3" data-path="../spring/other/spring-整合YML配置文件.html">
+            
+                <a href="../spring/other/spring-整合YML配置文件.html">
+            
+                    
+                    Spring整合YML配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.4" data-path="../spring/other/web/spring-mybatis.html">
+            
+                <a href="../spring/other/web/spring-mybatis.html">
+            
+                    
+                    Spring整合Mybatis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.5" data-path="../spring/other/web/spring-struts2.html">
+            
+                <a href="../spring/other/web/spring-struts2.html">
+            
+                    
+                    Spring整合Struts2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.6" data-path="../spring/other/web/spring-struts2-mybatis.html">
+            
+                <a href="../spring/other/web/spring-struts2-mybatis.html">
+            
+                    
+                    Spring-Struts2-Mybatis(配置化整合)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Spring源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="源码环境搭建.html">
+            
+                <a href="源码环境搭建.html">
+            
+                    
+                    第一章 源码环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="spring工厂.html">
+            
+                <a href="spring工厂.html">
+            
+                    
+                    第二章 工厂容器分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3" data-path="spring-xmlfactorybean.html">
+            
+                <a href="spring-xmlfactorybean.html">
+            
+                    
+                    第三章 XMLBeanFactory分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../springmvc/">
+            
+                <a href="../springmvc/">
+            
+                    
+                    SpringMVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../springmvc/springmvc-引言.html">
+            
+                <a href="../springmvc/springmvc-引言.html">
+            
+                    
+                    第一章 引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../springmvc/springmvc-开发案例.html">
+            
+                <a href="../springmvc/springmvc-开发案例.html">
+            
+                    
+                    第二章 SpringMV开发案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../docker/">
+            
+                <a href="../docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../docker/docker-简介.html">
+            
+                <a href="../docker/docker-简介.html">
+            
+                    
+                    Docker简介及安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../docker/docker-aliyun.html">
+            
+                <a href="../docker/docker-aliyun.html">
+            
+                    
+                    阿里云镜像加速配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../docker/docker-image.html">
+            
+                <a href="../docker/docker-image.html">
+            
+                    
+                    Docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../docker/docker-command.html">
+            
+                <a href="../docker/docker-command.html">
+            
+                    
+                    Docker基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../docker/docker-container.html">
+            
+                <a href="../docker/docker-container.html">
+            
+                    
+                    Docker容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../docker/docker-pushaliyun.html">
+            
+                <a href="../docker/docker-pushaliyun.html">
+            
+                    
+                    Docker本地推送到阿里云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../docker/docker-private.html">
+            
+                <a href="../docker/docker-private.html">
+            
+                    
+                    Docker私有库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../docker/docker-appinstall.html">
+            
+                <a href="../docker/docker-appinstall.html">
+            
+                    
+                    Docker安装常用软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第三章 XMLBeanFactory分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#xmlfactorybean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;"><b></b>XMLFactoryBean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;</a></li><ul><li><span class="title-icon "></span><a href="#1-xmlfactorybean&#x7684;&#x4F7F;&#x7528;"><b></b>1. XMLFactoryBean&#x7684;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#2-&#x95EE;&#x9898;&#x70B9;"><b></b>2. &#x95EE;&#x9898;&#x70B9;</a></li></ul></ul></div><a href="#xmlfactorybean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="xmlfactorybean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;"><a name="xmlfactorybean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;" class="anchor-navigation-ex-anchor" href="#xmlfactorybean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>XMLFactoryBean&#x7684;&#x6E90;&#x7801;&#x5256;&#x6790;</h1>
+<h2 id="1-xmlfactorybean&#x7684;&#x4F7F;&#x7528;"><a name="1-xmlfactorybean&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#1-xmlfactorybean&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1. XMLFactoryBean&#x7684;&#x4F7F;&#x7528;</h2>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x901A;&#x8FC7;ClassPathResource&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x628A;XML&#x5C01;&#x88C5;&#x6210;Java&#x5BF9;&#x8C61;&#xFF0C;&#x8FDB;&#x800C;&#x521B;&#x5EFA;Spring&#x5DE5;&#x5382;&#x5BB9;&#x5668;</span>
+BeanFactory beanFactory = <span class="hljs-keyword">new</span> XmlBeanFactory(<span class="hljs-keyword">new</span> ClassPathResource(<span class="hljs-string">&quot;applicationContext.xml&quot;</span>));
+
+<span class="hljs-comment">// &#x4ECE;&#x5DE5;&#x5382;&#x5BB9;&#x5668;&#x4E2D;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;</span>
+User user = (User) beanFactory.getBean(<span class="hljs-string">&quot;user&quot;</span>);
+</code></pre>
+<h2 id="2-&#x95EE;&#x9898;&#x70B9;"><a name="2-&#x95EE;&#x9898;&#x70B9;" class="anchor-navigation-ex-anchor" href="#2-&#x95EE;&#x9898;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x95EE;&#x9898;&#x70B9;</h2>
+<pre><code class="lang-markdown">BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource(&quot;applicationContext.xml&quot;))
+<span class="hljs-bullet">1. </span>&#x600E;&#x4E48;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6; &#x5982;&#x4F55;&#x83B7;&#x5F97;IO&#x8D44;&#x6E90;&#xFF1F;
+<span class="hljs-code">    - ClassPathResource &#x4F5C;&#x4E3A; Resource &#x7684;&#x5B50;&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x83B7;&#x53D6;InputStream&#x6D41;&#x7684;&#x5B9E;&#x73B0;</span>
+<span class="hljs-bullet">2. </span>&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x5982;&#x4F55;&#x5728;Spring&#x4E2D;&#x4EE5;&#x5BF9;&#x8C61;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF1F;&#x901A;&#x8FC7;&#x8C01;&#x5C01;&#x88C5;&#x6210;&#x5BF9;&#x8C61;&#xFF1F;
+<span class="hljs-code">    - &#x901A;&#x8FC7; XmlBeanDefinitionReader &#x628A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#x5C01;&#x88C5;&#x6210;BeanDefinition&#xFF0C;BeanDefinition&#x662F;&#x63A5;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x7528;&#x5176;&#x5B9E;&#x73B0;&#x7C7B;GenericBeanDefinition</span>
+<span class="hljs-code">    - &#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x5C01;&#x88C5;&#x6210;&#x7684;&#x5BF9;&#x8C61;&#x662F;GenericBeanDefinition</span>
+<span class="hljs-bullet">3. </span>&#x6240;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;
+</code></pre>
+<p><img src="../assets/spring-source/spring-source-xmlbeanfactory.jpg" alt="spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6D41;&#x7A0B;"> </p>
+<footer class="page-footer"><span class="copyright">&#xA9; Ale all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-15 16:12:33
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="spring工厂.html" class="navigation navigation-prev " aria-label="Previous page: 第二章 工厂容器分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../springmvc/" class="navigation navigation-next " aria-label="Next page: SpringMVC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第三章 XMLBeanFactory分析","level":"1.6.3","depth":2,"next":{"title":"SpringMVC","level":"1.7","depth":1,"path":"springmvc/README.md","ref":"springmvc/README.md","articles":[{"title":"第一章 引言","level":"1.7.1","depth":2,"path":"springmvc/springmvc-引言.md","ref":"springmvc/springmvc-引言.md","articles":[]},{"title":"第二章 SpringMV开发案例","level":"1.7.2","depth":2,"path":"springmvc/springmvc-开发案例.md","ref":"springmvc/springmvc-开发案例.md","articles":[]}]},"previous":{"title":"第二章 工厂容器分析","level":"1.6.2","depth":2,"path":"spring-source/spring工厂.md","ref":"spring-source/spring工厂.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search","search-pro","highlight","-sharing","code-optimize","sidebar-style","github","flexible-alerts","expandable-chapters-small","tbfed-pagefooter","anchor-navigation-ex","pageview-count"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"sidebar-style":{"author":"Ale","title":"个人博客"},"tbfed-pagefooter":{"copyright":"&copy Ale","modify_label":"该文修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/hlzhen"},"search-pro":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":false,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"pageview-count":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"code-optimize":{"copyButtons":true,"showLines":false}},"theme":"default","author":"Ale","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook","language":"zh-hans","gitbook":"3.2.3","description":"live and learn"},"file":{"path":"spring-source/spring-xmlfactorybean.md","mtime":"2022-05-15T08:12:33.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-29T10:59:04.096Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code-optimize/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
